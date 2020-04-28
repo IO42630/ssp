@@ -1,13 +1,11 @@
 package com.olexyn.ssp;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import java.io.IOException;
+
+
+public class App {
+    public static void main(String... args) throws IOException {
+        SocketProxyServer socketProxyServer = new SocketProxyServer(9098, "google.ch", 80);
+        socketProxyServer.start();
     }
 }
